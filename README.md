@@ -9,11 +9,12 @@ Environment setup and build
 Usefull guides are available
 
 http://www.koushikdutta.com/2010/10/porting-clockwork-recovery-to-new.html
+
 http://forum.xda-developers.com/showthread.php?t=1866545
 
 Some usefull tips
 
-* Retrieve CM sources into some folder.
+* Retrieve CM sources into some folder from jellybean branch.
 
 repo init -u git://github.com/CyanogenMod/android.git -b jellybean
 
