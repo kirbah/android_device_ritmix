@@ -6,22 +6,23 @@ The device configuration was initially created to build ClockworkMode recovery f
 Environment setup and build
 -----------------
 
-Usefull guide are available 
+Usefull guides are available
+
 http://www.koushikdutta.com/2010/10/porting-clockwork-recovery-to-new.html
 http://forum.xda-developers.com/showthread.php?t=1866545
 
 Some usefull tips
 
-1. Retrieve CM sources into some folder.
+* Retrieve CM sources into some folder.
 
 repo init -u git://github.com/CyanogenMod/android.git -b jellybean
 
-2. Put Ritmix device config into CyanogenMode/device/Ritmix/ folder.
-3. Get recovery.img from tablet using
+* Put Ritmix device config into CyanogenMode/device/Ritmix/ folder.
+* Get recovery.img from tablet using
 
 cat /dev/block/nandg >> recovery.img
 
-4. Build with original recovery
+* Build with original recovery
 
 build/tools/device/mkvendor.sh Ritmix RMD1030 /your/path/to/the/recovery.img
 
@@ -34,6 +35,7 @@ Flash CWM
 Run following commands
 
 adb push recovery.img /sdcard/
+
 adb shell "cat /sdcard/recovery.img > /dev/block/nandg; sync"
 
 Links
