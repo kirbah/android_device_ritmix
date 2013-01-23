@@ -39,12 +39,13 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP specific
 DEVICE_RESOLUTION := 1024x768
-TW_INTERNAL_STORAGE_PATH := "/dev/block/nandi"
+TW_INTERNAL_STORAGE_PATH := "/sdcard"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
-#-- custom maps the power button for the lockscreen
-#TW_CUSTOM_POWER_BUTTON := 107
+TW_EXTERNAL_STORAGE_PATH := "/extsd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "extsd"
 #-- enables touch event logging to help debug touchscreen issues
-TWRP_EVENT_LOGGING := true
-
+#TWRP_EVENT_LOGGING := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
+TARGET_USE_CUSTOM_SECOND_LUN_NUM := 1
 
 

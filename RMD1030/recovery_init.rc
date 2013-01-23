@@ -22,8 +22,7 @@ on boot
     domainname localdomain
 
 # insmod tp & key driver
-	insmod /system/modules/ft5x_ts.ko
-	#insmod /sdcard/systemcopy/ft5x_ts.ko
+    insmod /system/modules/ft5x_ts.ko
 
     class_start default
 
