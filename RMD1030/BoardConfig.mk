@@ -27,11 +27,24 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_PREBUILT_KERNEL := device/Ritmix/RMD1030/kernel
+TARGET_RECOVERY_INITRC := device/Ritmix/RMD1030/recovery_init.rc
 
-# Recovery Stuff
+# CWM Recovery Stuff
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/Ritmix/RMD1030/recovery_keys.c
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Use this flag if the board has a ext4 partition larger than 2gb
 #BOARD_HAS_LARGE_FILESYSTEM := true
+
+
+# TWRP specific
+DEVICE_RESOLUTION := 1024x768
+TW_INTERNAL_STORAGE_PATH := "/dev/block/nandi"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+#-- custom maps the power button for the lockscreen
+#TW_CUSTOM_POWER_BUTTON := 107
+#-- enables touch event logging to help debug touchscreen issues
+TWRP_EVENT_LOGGING := true
+
+
 

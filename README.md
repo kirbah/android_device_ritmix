@@ -17,20 +17,31 @@ Some usefull tips
 * Retrieve CM sources into some folder from jellybean branch.
 
 repo init -u git://github.com/CyanogenMod/android.git -b jellybean
+repo sync
 
 * Put Ritmix device config into CyanogenMode/device/Ritmix/ folder.
 * Get recovery.img from tablet using
 
 cat /dev/block/nandg >> recovery.img
 
-* Build with original recovery
+* Kernel from recovery was extracted during new vendor creation. Following command build device/Ritmix/RMD1030 folder with kernel extracted from recovery.img file.
 
 build/tools/device/mkvendor.sh Ritmix RMD1030 /your/path/to/the/recovery.img
 
+* Build with kernel from original recovery
+
 . build/envsetup.sh && lunch full_RMD1030-eng
 
+make -j4 recoveryimage
 
-Flash CWM
+TWRP touch recovery
+-------------
+
+TWRP recovery build guide
+http://forum.xda-developers.com/showthread.php?t=1943625
+
+
+Flash CWM or TWRP
 ---------
 
 Run following commands
@@ -44,5 +55,6 @@ Links
 
 https://github.com/allwinner-dev-team/android_device_allwinner_example
 
+https://github.com/allwinner-dev-team/android_device_allwinner_common
 
 
