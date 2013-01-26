@@ -45,7 +45,7 @@ TW_EXTERNAL_STORAGE_PATH := "/extsd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "extsd"
 #-- enables touch event logging to help debug touchscreen issues
 #TWRP_EVENT_LOGGING := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
-TARGET_USE_CUSTOM_SECOND_LUN_NUM := 1
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
+#TARGET_USE_CUSTOM_SECOND_LUN_NUM := 1
 
 

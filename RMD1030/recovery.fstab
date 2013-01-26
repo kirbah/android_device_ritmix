@@ -1,12 +1,14 @@
 # mount point	fstype		device					device2
 
+/bootloader		vfat		/dev/block/nanda
 /boot			emmc		/dev/block/nandc
 /system			ext4		/dev/block/nandd
 /data			ext4		/dev/block/nande
 /misc			emmc		/dev/block/nandf
+/recovery		emmc		/dev/block/nandg
 /cache			ext4		/dev/block/nandh
 /sdcard			vfat		/dev/block/nandi
-/extsd			vfat		/devices/platform/sunxi-mmc.1/mmc_host	/devices/platform/sunxi-mmc.0/mmc_host
-/usbsd			vfat		/devices/platform/sw-ehci.1	/devices/platform/sw_hcd_host0	/devices/platform/sw-ehci.2	/devices/platform/sw-ohci.1	/devices/platform/sw-ohci.2
+/extsd			vfat		/dev/block/mmcblk0p1
+/usbsd			vfat		/dev/block/sda1 /dev/block/sdb1
 
 
